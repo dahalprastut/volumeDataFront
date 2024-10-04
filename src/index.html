@@ -62,7 +62,7 @@
         <section class="mb-20 pb-20 border-bottom">
           <div class="mb-15 d-flex">
             <div class="left-align">
-              <label name="curveWidth">Highest Curve Width:</label>
+              <label name="curveWidth">Longest Loop Width:</label>
               <input
                 class="curveWidth"
                 type="text"
@@ -76,7 +76,7 @@
           </div>
           <div class="mb-15 d-flex">
             <div class="left-align">
-              <label name="middleCurveWidth">Middle Curve Width:</label>
+              <label name="middleCurveWidth">Middle Loop Width:</label>
               <input
                 class="middleCurveWidth"
                 type="text"
@@ -90,7 +90,7 @@
           </div>
           <div class="d-flex">
             <div class="left-align">
-              <label name="lowestCurveWidth">Lowest Curve Width:</label>
+              <label name="lowestCurveWidth">Shortest Loop Width:</label>
               <input
                 class="lowestCurveWidth"
                 type="text"
@@ -106,7 +106,57 @@
         <section class="mb-20 pb-20 border-bottom">
           <div class="mb-15 d-flex">
             <div class="left-align">
-              <label name="highestLoopValue">Biggest Loop Value:</label>
+              <label name="highestLoopPercentage"
+                >Longest Loop Percentage:</label
+              >
+              <input
+                class="highestLoopPercentage"
+                type="text"
+                value="50"
+                disabled="true"
+              />
+            </div>
+            <button class="editLongestLoopPercentage">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+          </div>
+          <div class="mb-15 d-flex">
+            <div class="left-align">
+              <label name="middleLoopPercentage">Middle Loop Percentage:</label>
+              <input
+                class="middleLoopPercentage"
+                type="text"
+                value="30"
+                disabled="true"
+              />
+            </div>
+            <button class="editMiddleLoopPercentage">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+          </div>
+          <div class="d-flex">
+            <div class="left-align">
+              <label name="lowestLoopPercentage"
+                >Shortest Loop Percentage:</label
+              >
+              <input
+                class="lowestLoopPercentage"
+                type="text"
+                value="20"
+                disabled="true"
+              />
+            </div>
+            <button class="editLowestLoopPercentage">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+          </div>
+        </section>
+        <section class="mb-20 pb-20 border-bottom">
+          <div class="mb-15 d-flex">
+            <div class="left-align">
+              <label name="highestLoopValue"
+                >Longest Loop Central Intensity Value:</label
+              >
               <input
                 class="highestLoopValue"
                 type="text"
@@ -120,7 +170,9 @@
           </div>
           <div class="mb-15 d-flex">
             <div class="left-align">
-              <label name="middleLoopValue">Middle Loop Value:</label>
+              <label name="middleLoopValue"
+                >Middle Loop Central Intensity Value:</label
+              >
               <input
                 class="middleLoopValue"
                 type="text"
@@ -134,7 +186,9 @@
           </div>
           <div class="d-flex">
             <div class="left-align">
-              <label name="lowestLoopValue">Lowest Loop Value:</label>
+              <label name="lowestLoopValue"
+                >Shortest Loop Central Intensity Value:</label
+              >
               <input
                 class="lowestLoopValue"
                 type="text"
@@ -151,7 +205,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="lowestIntensityValueInHighestLoop"
-                >Lowest Intensity Value in Biggest Loop:</label
+                >Lowest Intensity Value in Longest Loop:</label
               >
               <input
                 class="lowestIntensityValueInHighestLoop"
@@ -184,7 +238,7 @@
           <div class="d-flex">
             <div class="left-align">
               <label name="lowestIntensityValueInLowestLoop"
-                >Lowest Intensity Value in Lowest Loop:</label
+                >Lowest Intensity Value in Shortest Loop:</label
               >
               <input
                 class="lowestIntensityValueInLowestLoop"
@@ -203,7 +257,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="loopStandardDeviation"
-                >Highest Loop Standard Deviation:</label
+                >Longest Loop Width Standard Deviation:</label
               >
               <input
                 class="loopStandardDeviation"
@@ -219,7 +273,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="middleLoopStandardDeviation"
-                >Middle Loop Standard Deviation:</label
+                >Middle Loop Width Standard Deviation:</label
               >
               <input
                 class="middleLoopStandardDeviation"
@@ -235,7 +289,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="lowestLoopStandardDeviation"
-                >Lowest Loop Standard Deviation:</label
+                >Shortest Loop Width Standard Deviation:</label
               >
               <input
                 class="lowestLoopStandardDeviation"
@@ -253,7 +307,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="intensityStandardDeviation"
-                >Highest Intensity Standard Deviation:</label
+                >Longest Loop Intensity Standard Deviation:</label
               >
               <input
                 class="intensityStandardDeviation"
@@ -269,7 +323,7 @@
           <div class="mb-15 d-flex">
             <div class="left-align">
               <label name="middleIntensityStandardDeviation"
-                >Middle Intensity Standard Deviation:</label
+                >Middle Loop Intensity Standard Deviation:</label
               >
               <input
                 class="middleIntensityStandardDeviation"
@@ -285,7 +339,7 @@
           <div class="d-flex">
             <div class="left-align">
               <label name="lowestIntensityStandardDeviation"
-                >Lowest Intensity Standard Deviation:</label
+                >Shortest Loop Intensity Standard Deviation:</label
               >
               <input
                 class="lowestIntensityStandardDeviation"

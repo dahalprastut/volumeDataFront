@@ -5,6 +5,15 @@ const editLowestCurveWidth = document.querySelector(".editLowestCurveWidth");
 const editHighestLoopValue = document.querySelector(".editHighestLoopValue");
 const editMiddleLoopValue = document.querySelector(".editMiddleLoopValue");
 const editLowestLoopValue = document.querySelector(".editLowestLoopValue");
+const editLongestLoopPercentage = document.querySelector(
+  ".editLongestLoopPercentage"
+);
+const editMiddleLoopPercentage = document.querySelector(
+  ".editMiddleLoopPercentage"
+);
+const editLowestLoopPercentage = document.querySelector(
+  ".editLowestLoopPercentage"
+);
 const editLowestIntensityValueInHighestLoop = document.querySelector(
   ".editLowestIntensityValueInHighestLoop"
 );
@@ -107,6 +116,27 @@ editLowestLoopValue.addEventListener("click", () => {
   const length = element.value.length; // Get the length of the input value
   element.setSelectionRange(length, length); // Set cursor position to the end
 });
+editLongestLoopPercentage.addEventListener("click", () => {
+  const element = document.querySelector(`.highestLoopPercentage`);
+  element.disabled = false;
+  element.focus();
+  const length = element.value.length; // Get the length of the input value
+  element.setSelectionRange(length, length); // Set cursor position to the end
+});
+editMiddleLoopPercentage.addEventListener("click", () => {
+  const element = document.querySelector(`.middleLoopPercentage`);
+  element.disabled = false;
+  element.focus();
+  const length = element.value.length; // Get the length of the input value
+  element.setSelectionRange(length, length); // Set cursor position to the end
+});
+editLowestLoopPercentage.addEventListener("click", () => {
+  const element = document.querySelector(`.lowestLoopPercentage`);
+  element.disabled = false;
+  element.focus();
+  const length = element.value.length; // Get the length of the input value
+  element.setSelectionRange(length, length); // Set cursor position to the end
+});
 editLowestIntensityValueInHighestLoop.addEventListener("click", () => {
   const element = document.querySelector(`.lowestIntensityValueInHighestLoop`);
   element.disabled = false;
@@ -186,6 +216,15 @@ generateBtn.addEventListener("click", async () => {
   const curveWidthLowest = parseInt(
     document.querySelector(".lowestCurveWidth").value
   );
+  const highestLoopPercentage = parseInt(
+    document.querySelector(".highestLoopPercentage").value
+  );
+  const middleLoopPercentage = parseInt(
+    document.querySelector(".middleLoopPercentage").value
+  );
+  const lowestLoopPercentage = parseInt(
+    document.querySelector(".lowestLoopPercentage").value
+  );
   const dataSize = parseInt(document.querySelector(".dataSize")?.value) || 512;
   const alphaValue =
     parseFloat(document.querySelector(".alphaVal")?.value) || 0.0;
@@ -256,6 +295,9 @@ generateBtn.addEventListener("click", async () => {
           intensityStandardDeviation,
           middleIntensityStandardDeviation,
           lowestIntensityStandardDeviation,
+          highestLoopPercentage,
+          middleLoopPercentage,
+          lowestLoopPercentage,
           fileName,
         }), // Adjust curveWidth as needed
       }
