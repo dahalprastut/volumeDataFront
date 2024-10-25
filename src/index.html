@@ -20,7 +20,7 @@
   <body>
     <div class="center">
       <h1 class="text-center mt-20">Automatic Creation of Volumetric Data</h1>
-      <header class="d-flex jc-between mt-20 mb-20">
+      <header class="d-flex jc-between mt-20 mb-25">
         <div class="pl-20 d-flex">
           <div class="left-align">
             <label name="alphaVal">Alpha Value:</label>
@@ -58,303 +58,349 @@
           </select>
         </div>
       </header>
-      <div class="wrapper p-30 br-1">
-        <section class="mb-20 pb-20 border-bottom">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="curveWidth">Longest Loop Width:</label>
-              <input
-                class="curveWidth"
-                type="text"
-                value="12"
-                disabled="true"
-              />
-            </div>
-            <button class="editCurveWidth">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="middleCurveWidth">Middle Loop Width:</label>
-              <input
-                class="middleCurveWidth"
-                type="text"
-                value="5"
-                disabled="true"
-              />
-            </div>
-            <button class="editMiddleCurveWidth">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="d-flex">
-            <div class="left-align">
-              <label name="lowestCurveWidth">Shortest Loop Width:</label>
-              <input
-                class="lowestCurveWidth"
-                type="text"
-                value="3"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestCurveWidth">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-        </section>
-        <section class="mb-20 pb-20 border-bottom">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="highestLoopPercentage"
-                >Longest Loop Percentage:</label
-              >
-              <input
-                class="highestLoopPercentage"
-                type="text"
-                value="50"
-                disabled="true"
-              />
-            </div>
-            <button class="editLongestLoopPercentage">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="middleLoopPercentage">Middle Loop Percentage:</label>
-              <input
-                class="middleLoopPercentage"
-                type="text"
-                value="30"
-                disabled="true"
-              />
-            </div>
-            <button class="editMiddleLoopPercentage">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="d-flex">
-            <div class="left-align">
-              <label name="lowestLoopPercentage"
-                >Shortest Loop Percentage:</label
-              >
-              <input
-                class="lowestLoopPercentage"
-                type="text"
-                value="20"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestLoopPercentage">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-        </section>
-        <section class="mb-20 pb-20 border-bottom">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="highestLoopValue"
-                >Longest Loop Central Intensity Value:</label
-              >
-              <input
-                class="highestLoopValue"
-                type="text"
-                value="255"
-                disabled="true"
-              />
-            </div>
-            <button class="editHighestLoopValue">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="middleLoopValue"
-                >Middle Loop Central Intensity Value:</label
-              >
-              <input
-                class="middleLoopValue"
-                type="text"
-                value="140"
-                disabled="true"
-              />
-            </div>
-            <button class="editMiddleLoopValue">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="d-flex">
-            <div class="left-align">
-              <label name="lowestLoopValue"
-                >Shortest Loop Central Intensity Value:</label
-              >
-              <input
-                class="lowestLoopValue"
-                type="text"
-                value="90"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestLoopValue">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-        </section>
-        <main class="mb-20 pb-20 border-bottom">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="lowestIntensityValueInHighestLoop"
-                >Lowest Intensity Value in Longest Loop:</label
-              >
-              <input
-                class="lowestIntensityValueInHighestLoop"
-                type="text"
-                value="100"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestIntensityValueInHighestLoop">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="lowestIntensityValueInMiddleLoop"
-                >Lowest Intensity Value in Middle Loop:</label
-              >
-              <input
-                class="lowestIntensityValueInMiddleLoop"
-                type="text"
-                value="80"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestIntensityValueInMiddleLoop">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-            <!-- <button class="editMiddleLoopValue">Edit</button> -->
-          </div>
-          <div class="d-flex">
-            <div class="left-align">
-              <label name="lowestIntensityValueInLowestLoop"
-                >Lowest Intensity Value in Shortest Loop:</label
-              >
-              <input
-                class="lowestIntensityValueInLowestLoop"
-                type="text"
-                value="80"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestIntensityValueInLowestLoop">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-            <!-- <button class="editLowestLoopValue">Edit</button> -->
-          </div>
-        </main>
-        <div class="stdd mb-20 border-bottom">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="loopStandardDeviation"
-                >Longest Loop Width Standard Deviation:</label
-              >
-              <input
-                class="loopStandardDeviation"
-                type="text"
-                value="0.8"
-                disabled="true"
-              />
-            </div>
-            <button class="editLoopStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="middleLoopStandardDeviation"
-                >Middle Loop Width Standard Deviation:</label
-              >
-              <input
-                class="middleLoopStandardDeviation"
-                type="text"
-                value="0.8"
-                disabled="true"
-              />
-            </div>
-            <button class="editMiddleLoopStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="lowestLoopStandardDeviation"
-                >Shortest Loop Width Standard Deviation:</label
-              >
-              <input
-                class="lowestLoopStandardDeviation"
-                type="text"
-                value="0.8"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestLoopStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-        </div>
-        <div class="stdd mb-20">
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="intensityStandardDeviation"
-                >Longest Loop Intensity Standard Deviation:</label
-              >
-              <input
-                class="intensityStandardDeviation"
-                type="text"
-                value="1"
-                disabled="true"
-              />
-            </div>
-            <button class="editIntensityStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="mb-15 d-flex">
-            <div class="left-align">
-              <label name="middleIntensityStandardDeviation"
-                >Middle Loop Intensity Standard Deviation:</label
-              >
-              <input
-                class="middleIntensityStandardDeviation"
-                type="text"
-                value="1"
-                disabled="true"
-              />
-            </div>
-            <button class="editMiddleIntensityStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-          <div class="d-flex">
-            <div class="left-align">
-              <label name="lowestIntensityStandardDeviation"
-                >Shortest Loop Intensity Standard Deviation:</label
-              >
-              <input
-                class="lowestIntensityStandardDeviation"
-                type="text"
-                value="1"
-                disabled="true"
-              />
-            </div>
-            <button class="editLowestIntensityStandardDeviation">
-              <i class="fas fa-pencil-alt"></i>
-            </button>
-          </div>
-        </div>
+	  <main>
 
-        <footer class="jc-center">
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Loop Percentage</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="highestLoopPercentage">Longest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="highestLoopPercentage"
+					type="text"
+					value="50"
+					disabled="true"
+				  />
+				  <button class="editLongestLoopPercentage">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="middleLoopPercentage">Middle Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="middleLoopPercentage"
+					type="text"
+					value="30"
+					disabled="true"
+				  />
+				  <button class="editMiddleLoopPercentage">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestLoopPercentage">Shortest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestLoopPercentage"
+					type="text"
+					value="20"
+					disabled="true"
+				  />
+				  <button class="editLowestLoopPercentage">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Loop Width</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="curveWidth">Longest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="curveWidth"
+					type="text"
+					value="12"
+					disabled="true"
+				  />
+				  <button class="editCurveWidth">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="middleCurveWidth">Middle Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="middleCurveWidth"
+					type="text"
+					value="5"
+					disabled="true"
+				  />
+				  <button class="editMiddleCurveWidth">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestCurveWidth">Shortest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestCurveWidth"
+					type="text"
+					value="3"
+					disabled="true"
+				  />
+				  <button class="editLowestCurveWidth">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Central Intensity Value</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="highestLoopValue">Longest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="highestLoopValue"
+					type="text"
+					value="255"
+					disabled="true"
+				  />
+				  <button class="editHighestLoopValue">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="middleLoopValue">Middle Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="middleLoopValue"
+					type="text"
+					value="140"
+					disabled="true"
+				  />
+				  <button class="editMiddleLoopValue">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestLoopValue">Shortest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestLoopValue"
+					type="text"
+					value="90"
+					disabled="true"
+				  />
+				  <button class="editLowestLoopValue">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Lowest Intensity Value</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="lowestIntensityValueInHighestLoop"
+					>Longest Loop:</label
+				  >
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestIntensityValueInHighestLoop"
+					type="text"
+					value="100"
+					disabled="true"
+				  />
+				  <button class="editLowestIntensityValueInHighestLoop">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="lowestIntensityValueInMiddleLoop"
+					>Middle Loop:</label
+				  >
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestIntensityValueInMiddleLoop"
+					type="text"
+					value="80"
+					disabled="true"
+				  />
+				  <button class="editLowestIntensityValueInMiddleLoop">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestIntensityValueInLowestLoop"
+					>Shortest Loop:</label
+				  >
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestIntensityValueInLowestLoop"
+					type="text"
+					value="80"
+					disabled="true"
+				  />
+				  <button class="editLowestIntensityValueInLowestLoop">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Width Standard Deviation</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="loopStandardDeviation">Longest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="loopStandardDeviation"
+					type="text"
+					value="0.8"
+					disabled="true"
+				  />
+				  <button class="editLoopStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="middleLoopStandardDeviation">Middle Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="middleLoopStandardDeviation"
+					type="text"
+					value="0.8"
+					disabled="true"
+				  />
+				  <button class="editMiddleLoopStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestLoopStandardDeviation">Shortest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestLoopStandardDeviation"
+					type="text"
+					value="0.8"
+					disabled="true"
+				  />
+				  <button class="editLowestLoopStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		  <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Intensity Standard Deviation</span>
+			<div class="wrapper-container">
+			  <div class="longest">
+				<div class="label">
+				  <label name="intensityStandardDeviation">Longest Loop:</label>
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="intensityStandardDeviation"
+					type="text"
+					value="1"
+					disabled="true"
+				  />
+				  <button class="editIntensityStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="middle">
+				<div class="label">
+				  <label name="middleIntensityStandardDeviation"
+					>Middle Loop:</label
+				  >
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="middleIntensityStandardDeviation"
+					type="text"
+					value="1"
+					disabled="true"
+				  />
+				  <button class="editMiddleIntensityStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			  <div class="shortest">
+				<div class="label">
+				  <label name="lowestIntensityStandardDeviation"
+					>Shortest Loop :</label
+				  >
+				</div>
+				<div class="input-wrapper">
+				  <input
+					class="lowestIntensityStandardDeviation"
+					type="text"
+					value="1"
+					disabled="true"
+				  />
+				  <button class="editLowestIntensityStandardDeviation">
+					<i class="fas fa-pencil-alt"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  </main>
+
+
+      <!-- === -->
+
+      
+
+        <footer class="jc-center mt-25">
           <button class="generateBtn br-12">Generate</button>
         </footer>
       </div>
