@@ -152,6 +152,12 @@ button {
 select {
   border-radius: 1rem;
   padding: 0 2rem;
+  background-color: white;
+}
+
+select:focus {
+  border-color: rgb(0, 174, 255);
+  outline-color: rgb(0, 174, 255);
 }
 
 /*margin classes*/
@@ -283,6 +289,10 @@ input {
   background: transparent;
 }
 
+.volNameInput {
+  width: 18rem;
+}
+
 .wrapper {
   background-color: #fff;
 }
@@ -292,7 +302,7 @@ footer button {
   width: auto;
   height: 4.2rem;
   list-style: 4.2rem;
-  background-color: #7f54dc;
+  background-color: rgb(0, 174, 255);
   color: #fff;
   transition: transform 0.1s ease; /* Add transition for smooth effect */
 }
@@ -320,6 +330,21 @@ footer button:focus:not(:active) {
 
 // Wrapper container
 
+.main-title {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.main-title span {
+  position: absolute;
+  height: 16px;
+  width: 47%;
+  left: 26.5%;
+  bottom: 6;
+  z-index: -1;
+  background-color: rgb(0, 174, 255);
+}
+
 main {
   margin-top: 50px;
 }
@@ -336,6 +361,7 @@ main {
   top: -14;
   background: #fff;
   padding: 0 8px;
+  font-weight: 600;
 }
 .wrapper-container {
   display: flex;
@@ -360,7 +386,13 @@ main {
   border: 1px solid #ccc;
   border-radius: 0.2rem;
   padding-left: 1rem;
+  width: 15rem;
   height: 3rem;
+}
+
+.category input:focus {
+  border-color: rgb(0, 174, 255);
+  outline-color: rgb(0, 174, 255);
 }
 
 .category button {

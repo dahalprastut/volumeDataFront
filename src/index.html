@@ -16,10 +16,33 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.scss" />
+
+	<!-- <style>
+		.contain{
+			display: flex;
+		}
+		.slider-wrapper {
+			width: 50%;
+		}
+		.slider {
+			height: auto !important;
+			margin-bottom: 0 !important;
+		}
+
+		.wrapper-container {
+			width: 50%;
+			justify-content: flex-end;
+		}
+		.wrapper-container input{
+			width: 10rem;
+		}
+	</style> -->
   </head>
   <body>
     <div class="center">
-      <h1 class="text-center mt-20">Automatic Creation of Volumetric Data</h1>
+
+		<h1 class="main-title text-center mt-20">Automatic Creation of Volumetric Data <span></span></h1>
+			
       <header class="d-flex jc-between mt-20 mb-25">
         <div class="pl-20 d-flex">
           <div class="left-align">
@@ -41,7 +64,7 @@
             </select>
           </div>
         </div>
-        <div class="pl-20 d-flex">
+        <div class="d-flex">
           <div class="left-align volName">
             <label name="curveWidth">Volume Name:</label>
             <!-- <input class="curveWidth" type="text" value="" disabled="true" /> -->
@@ -60,6 +83,60 @@
       </header>
 	  <main>
 
+
+		<!-- Delete this -->
+		<!-- <div class="category p-30 mt-25 ml-20 mr-20">
+			<span class="title">Loop Percentage</span>
+			<div class="contain">
+				<div class="slider-wrapper">
+
+					<div class="slider"></div>
+				</div>
+				<div class="wrapper-container">
+					<div class="longest">
+					  <div class="label">
+						<label name="highestLoopPercentage">Longest:</label>
+					  </div>
+					  <div class="input-wrapper">
+						<input
+						  class="highestLoopPercentage"
+						  type="text"
+						  value="50"
+						/>
+						
+					  </div>
+					</div>
+					<div class="middle">
+					  <div class="label">
+						<label name="middleLoopPercentage">Middle:</label>
+					  </div>
+					  <div class="input-wrapper">
+						<input
+						  class="middleLoopPercentage"
+						  type="text"
+						  value="30"
+						/>
+					  </div>
+					</div>
+					<div class="shortest">
+					  <div class="label">
+						<label name="lowestLoopPercentage">Shortest:</label>
+					  </div>
+					  <div class="input-wrapper">
+						<input
+						  class="lowestLoopPercentage"
+						  type="text"
+						  value="20"
+						/>
+					  </div>
+					</div>
+				  </div>
+			</div>
+		</div> -->
+
+
+		<!-- till here -->
+
 		  <div class="category p-30 mt-25 ml-20 mr-20">
 			<span class="title">Loop Percentage</span>
 			<div class="wrapper-container">
@@ -72,11 +149,10 @@
 					class="highestLoopPercentage"
 					type="text"
 					value="50"
-					disabled="true"
 				  />
-				  <button class="editLongestLoopPercentage">
+				  <!-- <button class="editLongestLoopPercentage">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -88,11 +164,10 @@
 					class="middleLoopPercentage"
 					type="text"
 					value="30"
-					disabled="true"
 				  />
-				  <button class="editMiddleLoopPercentage">
+				  <!-- <button class="editMiddleLoopPercentage">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -104,11 +179,10 @@
 					class="lowestLoopPercentage"
 					type="text"
 					value="20"
-					disabled="true"
 				  />
-				  <button class="editLowestLoopPercentage">
+				  <!-- <button class="editLowestLoopPercentage">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -126,11 +200,10 @@
 					class="curveWidth"
 					type="text"
 					value="12"
-					disabled="true"
 				  />
-				  <button class="editCurveWidth">
+				  <!-- <button class="editCurveWidth">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -142,11 +215,10 @@
 					class="middleCurveWidth"
 					type="text"
 					value="5"
-					disabled="true"
 				  />
-				  <button class="editMiddleCurveWidth">
+				  <!-- <button class="editMiddleCurveWidth">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -158,11 +230,10 @@
 					class="lowestCurveWidth"
 					type="text"
 					value="3"
-					disabled="true"
 				  />
-				  <button class="editLowestCurveWidth">
+				  <!-- <button class="editLowestCurveWidth">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -180,11 +251,10 @@
 					class="highestLoopValue"
 					type="text"
 					value="255"
-					disabled="true"
 				  />
-				  <button class="editHighestLoopValue">
+				  <!-- <button class="editHighestLoopValue">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -196,11 +266,10 @@
 					class="middleLoopValue"
 					type="text"
 					value="140"
-					disabled="true"
 				  />
-				  <button class="editMiddleLoopValue">
+				  <!-- <button class="editMiddleLoopValue">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -212,11 +281,10 @@
 					class="lowestLoopValue"
 					type="text"
 					value="90"
-					disabled="true"
 				  />
-				  <button class="editLowestLoopValue">
+				  <!-- <button class="editLowestLoopValue">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -236,11 +304,10 @@
 					class="lowestIntensityValueInHighestLoop"
 					type="text"
 					value="100"
-					disabled="true"
 				  />
-				  <button class="editLowestIntensityValueInHighestLoop">
+				  <!-- <button class="editLowestIntensityValueInHighestLoop">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -254,11 +321,10 @@
 					class="lowestIntensityValueInMiddleLoop"
 					type="text"
 					value="80"
-					disabled="true"
 				  />
-				  <button class="editLowestIntensityValueInMiddleLoop">
+				  <!-- <button class="editLowestIntensityValueInMiddleLoop">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -272,11 +338,10 @@
 					class="lowestIntensityValueInLowestLoop"
 					type="text"
 					value="80"
-					disabled="true"
 				  />
-				  <button class="editLowestIntensityValueInLowestLoop">
+				  <!-- <button class="editLowestIntensityValueInLowestLoop">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -294,11 +359,10 @@
 					class="loopStandardDeviation"
 					type="text"
 					value="0.8"
-					disabled="true"
 				  />
-				  <button class="editLoopStandardDeviation">
+				  <!-- <button class="editLoopStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -310,11 +374,10 @@
 					class="middleLoopStandardDeviation"
 					type="text"
 					value="0.8"
-					disabled="true"
 				  />
-				  <button class="editMiddleLoopStandardDeviation">
+				  <!-- <button class="editMiddleLoopStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -326,11 +389,10 @@
 					class="lowestLoopStandardDeviation"
 					type="text"
 					value="0.8"
-					disabled="true"
 				  />
-				  <button class="editLowestLoopStandardDeviation">
+				  <!-- <button class="editLowestLoopStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -348,11 +410,10 @@
 					class="intensityStandardDeviation"
 					type="text"
 					value="1"
-					disabled="true"
 				  />
-				  <button class="editIntensityStandardDeviation">
+				  <!-- <button class="editIntensityStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="middle">
@@ -366,11 +427,10 @@
 					class="middleIntensityStandardDeviation"
 					type="text"
 					value="1"
-					disabled="true"
 				  />
-				  <button class="editMiddleIntensityStandardDeviation">
+				  <!-- <button class="editMiddleIntensityStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			  <div class="shortest">
@@ -384,11 +444,10 @@
 					class="lowestIntensityStandardDeviation"
 					type="text"
 					value="1"
-					disabled="true"
 				  />
-				  <button class="editLowestIntensityStandardDeviation">
+				  <!-- <button class="editLowestIntensityStandardDeviation">
 					<i class="fas fa-pencil-alt"></i>
-				  </button>
+				  </button> -->
 				</div>
 			  </div>
 			</div>
@@ -406,7 +465,26 @@
       </div>
     </div>
 
-    <!-- <script src="main.js" type="module"></script> -->
+	<!-- <script src="https://unpkg.com/@spreadtheweb/multi-range-slider@1.0.2/dist/range-slider.main.min.js"></script> -->
     <script src="ui.js" type="module"></script>
+	<!-- <script>
+		new RangeSlider(".slider", {
+			values: [25, 50, 75],
+			pointRadius: 10,
+			step:1,
+			min:0,
+			max:100,
+			railHeight: 4,
+			trackHeight: 4,
+			colors: {
+				points: ["#540BEC", "#A2E4B8", "#F77BF0"], // ['blue', 'red']
+				rail: "#ccc",
+				tracks: [
+					"linear-gradient(90deg, #540BEC 0%, #A2E4B8 100%)",
+					"linear-gradient(90deg, #A2E4B8 0%, #F77BF0 100%)"
+				]
+			}
+		}).onChange(val => console.log(val));
+	</script> -->
   </body>
 </html>

@@ -58,148 +58,181 @@ function generateRandomString(length) {
 }
 
 // Example usage to generate a random string of length 6
-const randomString = generateRandomString(6);
+let randomString = generateRandomString(5);
+let highestWidth = document.querySelector(`.curveWidth`);
+let middleWidth = document.querySelector(`.middleCurveWidth`);
+let lowestWidth = document.querySelector(`.lowestCurveWidth`);
+let highestWidthVal = highestWidth.value;
+let middleWidthVal = middleWidth.value;
+let lowestWidthVal = lowestWidth.value;
 
-let fileName = `vol${randomString}`;
+let fileName = `vol_${highestWidthVal}_${middleWidthVal}_${lowestWidthVal}_${randomString}`;
 const html = `<input class="volNameInput" type="text" value=${fileName} disabled="true" />`;
 volName.insertAdjacentHTML("beforeend", html);
 
+changeVolName = () => {
+  highestWidthVal = highestWidth.value;
+  middleWidthVal = middleWidth.value;
+  lowestWidthVal = lowestWidth.value;
+  randomString = generateRandomString(5);
+  fileName = `vol_${highestWidthVal}_${middleWidthVal}_${lowestWidthVal}_${randomString}`;
+  return fileName;
+  //   const VolNameInput = document.querySelector(".volNameInput");
+  //   VolNameInput.value = fileName;
+};
+
 editVolName.addEventListener("click", () => {
-  fileName = `vol${generateRandomString(6)}`;
   const VolNameInput = document.querySelector(".volNameInput");
-  VolNameInput.value = fileName;
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 
-editCurveWidth.addEventListener("click", () => {
-  const element = document.querySelector(`.curveWidth`);
-
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor posi22tion to the end
+highestWidth.addEventListener("input", () => {
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
-editMiddleCurveWidth.addEventListener("click", () => {
-  const element = document.querySelector(`.middleCurveWidth`);
-
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
+middleWidth.addEventListener("input", () => {
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
-editLowestCurveWidth.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestCurveWidth`);
-
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
+lowestWidth.addEventListener("input", () => {
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 
-editHighestLoopValue.addEventListener("click", () => {
-  const element = document.querySelector(`.highestLoopValue`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editMiddleLoopValue.addEventListener("click", () => {
-  const element = document.querySelector(`.middleLoopValue`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestLoopValue.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestLoopValue`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLongestLoopPercentage.addEventListener("click", () => {
-  const element = document.querySelector(`.highestLoopPercentage`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editMiddleLoopPercentage.addEventListener("click", () => {
-  const element = document.querySelector(`.middleLoopPercentage`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestLoopPercentage.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestLoopPercentage`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestIntensityValueInHighestLoop.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestIntensityValueInHighestLoop`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestIntensityValueInMiddleLoop.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestIntensityValueInMiddleLoop`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestIntensityValueInLowestLoop.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestIntensityValueInLowestLoop`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLoopStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.loopStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editMiddleLoopStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.middleLoopStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestLoopStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestLoopStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editIntensityStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.intensityStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editMiddleIntensityStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.middleIntensityStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
-editLowestIntensityStandardDeviation.addEventListener("click", () => {
-  const element = document.querySelector(`.lowestIntensityStandardDeviation`);
-  element.disabled = false;
-  element.focus();
-  const length = element.value.length; // Get the length of the input value
-  element.setSelectionRange(length, length); // Set cursor position to the end
-});
+// editCurveWidth.addEventListener("click", () => {
+//   const element = document.querySelector(`.curveWidth`);
+
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor posi22tion to the end
+// });
+// editMiddleCurveWidth.addEventListener("click", () => {
+//   const element = document.querySelector(`.middleCurveWidth`);
+
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestCurveWidth.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestCurveWidth`);
+
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+
+// editHighestLoopValue.addEventListener("click", () => {
+//   const element = document.querySelector(`.highestLoopValue`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editMiddleLoopValue.addEventListener("click", () => {
+//   const element = document.querySelector(`.middleLoopValue`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestLoopValue.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestLoopValue`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLongestLoopPercentage.addEventListener("click", () => {
+//   const element = document.querySelector(`.highestLoopPercentage`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editMiddleLoopPercentage.addEventListener("click", () => {
+//   const element = document.querySelector(`.middleLoopPercentage`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestLoopPercentage.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestLoopPercentage`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestIntensityValueInHighestLoop.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestIntensityValueInHighestLoop`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestIntensityValueInMiddleLoop.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestIntensityValueInMiddleLoop`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestIntensityValueInLowestLoop.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestIntensityValueInLowestLoop`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLoopStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.loopStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editMiddleLoopStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.middleLoopStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestLoopStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestLoopStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editIntensityStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.intensityStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editMiddleIntensityStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.middleIntensityStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
+// editLowestIntensityStandardDeviation.addEventListener("click", () => {
+//   const element = document.querySelector(`.lowestIntensityStandardDeviation`);
+//   element.disabled = false;
+//   element.focus();
+//   const length = element.value.length; // Get the length of the input value
+//   element.setSelectionRange(length, length); // Set cursor position to the end
+// });
 
 generateBtn.addEventListener("click", async () => {
   generateBtn.disabled = true;
@@ -265,8 +298,6 @@ generateBtn.addEventListener("click", async () => {
     document.querySelector(".lowestIntensityStandardDeviation").value
   );
 
-  // console.log("cur", typeof curveWidth, curveWidth);
-  // console.log("sdaf", typeof dataSize, dataSize);
   // generateVolumetricData(curveWidth);
   try {
     // Send POST request to backend to generate volumetric data
@@ -306,11 +337,11 @@ generateBtn.addEventListener("click", async () => {
     if (response.ok) {
       await downloadFile(
         `${fileName}.txt`,
-        `http://localhost:3000/download/${alphaValue}/${fileName}.txt`
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${fileName}.txt`
       );
       await downloadFile(
         `${fileName}.byte`,
-        `http://localhost:3000/download/${alphaValue}/${fileName}.byte`
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${fileName}.byte`
       );
     } else {
       console.error("Failed to generate volumetric data:", response.statusText);
@@ -322,7 +353,8 @@ generateBtn.addEventListener("click", async () => {
     generateBtn.disabled = false;
     generateBtn.innerHTML = "Generate"; // Restore the button text
     generateBtn.style.cursor = "pointer";
-    fileName = `vol${generateRandomString(6)}`;
+    // fileName = `vol${generateRandomString(6)}`;
+    fileName = changeVolName();
     const VolNameInput = document.querySelector(".volNameInput");
     VolNameInput.value = fileName;
   }
