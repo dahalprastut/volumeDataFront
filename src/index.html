@@ -54,7 +54,7 @@
               <option value="-0.006">-0.006</option>
               <option value="-0.004">-0.004</option>
               <option value="-0.002">-0.002</option>
-              <option value="0.0">0.0</option>
+              <option value="0.0" selected>0.0</option>
               <option value="0.002">0.002</option>
               <option value="0.004">0.004</option>
               <option value="0.006">0.006</option>
@@ -73,11 +73,22 @@
             <i class="fa-solid fa-arrows-rotate"></i>
           </button>
         </div>
-        <div class="pr-20">
+        <div class="pr-20 dataSizeBox">
           <label name="dataSize">Data Size:</label>
           <select class="dataSize" name="dataSize" value="512" id="">
             <option value="512">512*512*512</option>
             <option value="256">256*256*256</option>
+          </select>
+        </div>
+        <div class="pr-20">
+          <label name="loopsNumber">Number of loops:</label>
+          <select class="loopsNumber" name="loopsNumber" value="100" id="">
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100" selected>100</option>
+            <option value="125">125</option>
+            <option value="150">150</option>
           </select>
         </div>
       </header>

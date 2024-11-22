@@ -259,6 +259,8 @@ generateBtn.addEventListener("click", async () => {
     document.querySelector(".lowestLoopPercentage").value
   );
   const dataSize = parseInt(document.querySelector(".dataSize")?.value) || 512;
+  const loopsNumber =
+    parseInt(document.querySelector(".loopsNumber")?.value) || 100;
   const alphaValue =
     parseFloat(document.querySelector(".alphaVal")?.value) || 0.0;
   const highestLoopValue = parseInt(
@@ -314,6 +316,7 @@ generateBtn.addEventListener("click", async () => {
           curveWidthMiddle,
           curveWidthLowest,
           dataSize,
+          loopsNumber,
           highestLoopValue,
           middleLoopValue,
           lowestLoopValue,
@@ -337,11 +340,11 @@ generateBtn.addEventListener("click", async () => {
     if (response.ok) {
       await downloadFile(
         `${fileName}.txt`,
-        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${fileName}.txt`
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${fileName}.txt`
       );
       await downloadFile(
         `${fileName}.byte`,
-        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${fileName}.byte`
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${fileName}.byte`
       );
     } else {
       console.error("Failed to generate volumetric data:", response.statusText);
