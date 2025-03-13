@@ -7,44 +7,69 @@ const editLowestCurveWidth = document.querySelector(".editLowestCurveWidth");
 const editHighestLoopValue = document.querySelector(".editHighestLoopValue");
 const editMiddleLoopValue = document.querySelector(".editMiddleLoopValue");
 const editLowestLoopValue = document.querySelector(".editLowestLoopValue");
-const editLongestLoopPercentage = document.querySelector(".editLongestLoopPercentage");
-const editMiddleLoopPercentage = document.querySelector(".editMiddleLoopPercentage");
-const editLowestLoopPercentage = document.querySelector(".editLowestLoopPercentage");
-const editLowestIntensityValueInHighestLoop = document.querySelector(".editLowestIntensityValueInHighestLoop");
-const editLowestIntensityValueInMiddleLoop = document.querySelector(".editLowestIntensityValueInMiddleLoop");
-const editLowestIntensityValueInLowestLoop = document.querySelector(".editLowestIntensityValueInLowestLoop");
-const editLoopStandardDeviation = document.querySelector(".editLoopStandardDeviation");
-const editMiddleLoopStandardDeviation = document.querySelector(".editMiddleLoopStandardDeviation");
-const editLowestLoopStandardDeviation = document.querySelector(".editLowestLoopStandardDeviation");
-const editIntensityStandardDeviation = document.querySelector(".editIntensityStandardDeviation");
-const editMiddleIntensityStandardDeviation = document.querySelector(".editMiddleIntensityStandardDeviation");
-const editLowestIntensityStandardDeviation = document.querySelector(".editLowestIntensityStandardDeviation");
+const editLongestLoopPercentage = document.querySelector(
+  ".editLongestLoopPercentage"
+);
+const editMiddleLoopPercentage = document.querySelector(
+  ".editMiddleLoopPercentage"
+);
+const editLowestLoopPercentage = document.querySelector(
+  ".editLowestLoopPercentage"
+);
+const editLowestIntensityValueInHighestLoop = document.querySelector(
+  ".editLowestIntensityValueInHighestLoop"
+);
+const editLowestIntensityValueInMiddleLoop = document.querySelector(
+  ".editLowestIntensityValueInMiddleLoop"
+);
+const editLowestIntensityValueInLowestLoop = document.querySelector(
+  ".editLowestIntensityValueInLowestLoop"
+);
+const editLoopStandardDeviation = document.querySelector(
+  ".editLoopStandardDeviation"
+);
+const editMiddleLoopStandardDeviation = document.querySelector(
+  ".editMiddleLoopStandardDeviation"
+);
+const editLowestLoopStandardDeviation = document.querySelector(
+  ".editLowestLoopStandardDeviation"
+);
+const editIntensityStandardDeviation = document.querySelector(
+  ".editIntensityStandardDeviation"
+);
+const editMiddleIntensityStandardDeviation = document.querySelector(
+  ".editMiddleIntensityStandardDeviation"
+);
+const editLowestIntensityStandardDeviation = document.querySelector(
+  ".editLowestIntensityStandardDeviation"
+);
 
 const numberOfLoops = document.querySelector(".numberOfLoops");
 const numberOfFootpoints = document.querySelector(".numberOfFootpoints");
 
 if (type === "SDO") {
-	numberOfFootpoints.style.display = "flex";
-	numberOfFootpoints.style.gap = "20px";
-	numberOfLoops.style.display = "none";
+  numberOfFootpoints.style.display = "flex";
+  numberOfFootpoints.style.gap = "20px";
+  numberOfLoops.style.display = "none";
 } else if (type === "TRACE") {
-	numberOfFootpoints.style.display = "none";
-	numberOfLoops.style.display = "block";
+  numberOfFootpoints.style.display = "none";
+  numberOfLoops.style.display = "block";
 }
 
 const volName = document.querySelector(".volName");
 const editVolName = document.querySelector(".editVolName");
 
 function generateRandomString(length) {
-	const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-	let randomString = "";
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let randomString = "";
 
-	for (let i = 0; i < length; i++) {
-		const randomIndex = Math.floor(Math.random() * characters.length);
-		randomString += characters.charAt(randomIndex);
-	}
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    randomString += characters.charAt(randomIndex);
+  }
 
-	return randomString;
+  return randomString;
 }
 
 // Example usage to generate a random string of length 6
@@ -61,36 +86,36 @@ const html = `<input class="volNameInput" type="text" value=${fileName} disabled
 volName.insertAdjacentHTML("beforeend", html);
 
 changeVolName = () => {
-	highestWidthVal = highestWidth.value;
-	middleWidthVal = middleWidth.value;
-	lowestWidthVal = lowestWidth.value;
-	randomString = generateRandomString(5);
-	fileName = `vol_${highestWidthVal}_${middleWidthVal}_${lowestWidthVal}_${randomString}`;
-	return fileName;
-	//   const VolNameInput = document.querySelector(".volNameInput");
-	//   VolNameInput.value = fileName;
+  highestWidthVal = highestWidth.value;
+  middleWidthVal = middleWidth.value;
+  lowestWidthVal = lowestWidth.value;
+  randomString = generateRandomString(5);
+  fileName = `vol_${highestWidthVal}_${middleWidthVal}_${lowestWidthVal}_${randomString}`;
+  return fileName;
+  //   const VolNameInput = document.querySelector(".volNameInput");
+  //   VolNameInput.value = fileName;
 };
 
 editVolName.addEventListener("click", () => {
-	const VolNameInput = document.querySelector(".volNameInput");
-	VolNameInput.value = changeVolName();
-	//   changeVolName();
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 
 highestWidth.addEventListener("input", () => {
-	const VolNameInput = document.querySelector(".volNameInput");
-	VolNameInput.value = changeVolName();
-	//   changeVolName();
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 middleWidth.addEventListener("input", () => {
-	const VolNameInput = document.querySelector(".volNameInput");
-	VolNameInput.value = changeVolName();
-	//   changeVolName();
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 lowestWidth.addEventListener("input", () => {
-	const VolNameInput = document.querySelector(".volNameInput");
-	VolNameInput.value = changeVolName();
-	//   changeVolName();
+  const VolNameInput = document.querySelector(".volNameInput");
+  VolNameInput.value = changeVolName();
+  //   changeVolName();
 });
 
 // editCurveWidth.addEventListener("click", () => {
@@ -225,154 +250,190 @@ lowestWidth.addEventListener("input", () => {
 // });
 
 generateBtn.addEventListener("click", async () => {
-	generateBtn.disabled = true;
-	generateBtn.style.cursor = "default";
+  generateBtn.disabled = true;
+  generateBtn.style.cursor = "default";
 
-	// Show loading spinner
-	generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+  // Show loading spinner
+  generateBtn.innerHTML =
+    '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
-	const curveWidth = parseInt(document.querySelector(".curveWidth").value);
-	const curveWidthMiddle = parseInt(document.querySelector(".middleCurveWidth").value);
-	const curveWidthLowest = parseInt(document.querySelector(".lowestCurveWidth").value);
-	const highestLoopPercentage = parseInt(document.querySelector(".highestLoopPercentage").value);
-	const middleLoopPercentage = parseInt(document.querySelector(".middleLoopPercentage").value);
-	const lowestLoopPercentage = parseInt(document.querySelector(".lowestLoopPercentage").value);
-	const dataSize = parseInt(document.querySelector(".dataSize")?.value) || 512;
-	let loopsNumber = parseInt(document.querySelector(".loopsNumber")?.value) || 100;
-	let footpointsNumber = parseInt(document.querySelector(".footpointsNumber")?.value) || 200;
-	if (type == "SDO") {
-		loopsNumber = footpointsNumber;
-	}
-	const neighboursNumber = parseInt(document.querySelector(".neighboursNumber")?.value) || 0;
-	const alphaValue = parseFloat(document.querySelector(".alphaVal")?.value) || 0.0;
-	const highestLoopValue = parseInt(document.querySelector(".highestLoopValue").value);
-	const middleLoopValue = parseInt(document.querySelector(".middleLoopValue").value);
-	const lowestLoopValue = parseInt(document.querySelector(".lowestLoopValue").value);
-	const lowestIntensityValueInHighestLoop = parseInt(
-		document.querySelector(".lowestIntensityValueInHighestLoop").value
-	);
-	const lowestIntensityValueInMiddleLoop = parseInt(
-		document.querySelector(".lowestIntensityValueInMiddleLoop").value
-	);
-	const lowestIntensityValueInLowestLoop = parseInt(
-		document.querySelector(".lowestIntensityValueInLowestLoop").value
-	);
-	const loopStandardDeviation = parseFloat(document.querySelector(".loopStandardDeviation").value);
-	const middleLoopStandardDeviation = parseFloat(document.querySelector(".middleLoopStandardDeviation").value);
-	const lowestLoopStandardDeviation = parseFloat(document.querySelector(".lowestLoopStandardDeviation").value);
-	const intensityStandardDeviation = parseFloat(document.querySelector(".intensityStandardDeviation").value);
-	const middleIntensityStandardDeviation = parseFloat(
-		document.querySelector(".middleIntensityStandardDeviation").value
-	);
-	const lowestIntensityStandardDeviation = parseFloat(
-		document.querySelector(".lowestIntensityStandardDeviation").value
-	);
+  const curveWidth = parseInt(document.querySelector(".curveWidth").value);
+  const curveWidthMiddle = parseInt(
+    document.querySelector(".middleCurveWidth").value
+  );
+  const curveWidthLowest = parseInt(
+    document.querySelector(".lowestCurveWidth").value
+  );
+  const highestLoopPercentage = parseInt(
+    document.querySelector(".highestLoopPercentage").value
+  );
+  const middleLoopPercentage = parseInt(
+    document.querySelector(".middleLoopPercentage").value
+  );
+  const lowestLoopPercentage = parseInt(
+    document.querySelector(".lowestLoopPercentage").value
+  );
+  const dataSize = parseInt(document.querySelector(".dataSize")?.value) || 512;
+  let loopsNumber =
+    parseInt(document.querySelector(".loopsNumber")?.value) || 100;
+  let footpointsNumber =
+    parseInt(document.querySelector(".footpointsNumber")?.value) || 200;
+  if (type == "SDO") {
+    loopsNumber = footpointsNumber;
+  }
+  let neighboursNumber =
+    parseInt(document.querySelector(".neighboursNumber")?.value) || 0; // Change here
 
-	// generateVolumetricData(curveWidth);
-	try {
-		// Send POST request to backend to generate volumetric data
-		const response = await fetch("http://localhost:3000/generate-volumetric-data", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				alphaValue,
-				curveWidth,
-				curveWidthMiddle,
-				curveWidthLowest,
-				dataSize,
-				loopsNumber,
-				neighboursNumber,
-				highestLoopValue,
-				middleLoopValue,
-				lowestLoopValue,
-				lowestIntensityValueInHighestLoop,
-				lowestIntensityValueInMiddleLoop,
-				lowestIntensityValueInLowestLoop,
-				loopStandardDeviation,
-				middleLoopStandardDeviation,
-				lowestLoopStandardDeviation,
-				intensityStandardDeviation,
-				middleIntensityStandardDeviation,
-				lowestIntensityStandardDeviation,
-				highestLoopPercentage,
-				middleLoopPercentage,
-				lowestLoopPercentage,
-				fileName,
-			}), // Adjust curveWidth as needed
-		});
+  if (type === "TRACE") {
+    neighboursNumber = 0;
+  }
+  const alphaValue =
+    parseFloat(document.querySelector(".alphaVal")?.value) || 0.0;
+  const highestLoopValue = parseInt(
+    document.querySelector(".highestLoopValue").value
+  );
+  const middleLoopValue = parseInt(
+    document.querySelector(".middleLoopValue").value
+  );
+  const lowestLoopValue = parseInt(
+    document.querySelector(".lowestLoopValue").value
+  );
+  const lowestIntensityValueInHighestLoop = parseInt(
+    document.querySelector(".lowestIntensityValueInHighestLoop").value
+  );
+  const lowestIntensityValueInMiddleLoop = parseInt(
+    document.querySelector(".lowestIntensityValueInMiddleLoop").value
+  );
+  const lowestIntensityValueInLowestLoop = parseInt(
+    document.querySelector(".lowestIntensityValueInLowestLoop").value
+  );
+  const loopStandardDeviation = parseFloat(
+    document.querySelector(".loopStandardDeviation").value
+  );
+  const middleLoopStandardDeviation = parseFloat(
+    document.querySelector(".middleLoopStandardDeviation").value
+  );
+  const lowestLoopStandardDeviation = parseFloat(
+    document.querySelector(".lowestLoopStandardDeviation").value
+  );
+  const intensityStandardDeviation = parseFloat(
+    document.querySelector(".intensityStandardDeviation").value
+  );
+  const middleIntensityStandardDeviation = parseFloat(
+    document.querySelector(".middleIntensityStandardDeviation").value
+  );
+  const lowestIntensityStandardDeviation = parseFloat(
+    document.querySelector(".lowestIntensityStandardDeviation").value
+  );
 
-		if (response.ok) {
-			await downloadFile(
-				`${fileName}.txt`,
-				`http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${neighboursNumber}/${fileName}.txt`
-			);
-			await downloadFile(
-				`${fileName}.byte`,
-				`http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${neighboursNumber}/${fileName}.byte`
-			);
-		} else {
-			console.error("Failed to generate volumetric data:", response.statusText);
-		}
-	} catch (error) {
-		console.error("Error:", error);
-	} finally {
-		// Re-enable the generate button
-		generateBtn.disabled = false;
-		generateBtn.innerHTML = "Generate"; // Restore the button text
-		generateBtn.style.cursor = "pointer";
-		// fileName = `vol${generateRandomString(6)}`;
-		fileName = changeVolName();
-		const VolNameInput = document.querySelector(".volNameInput");
-		VolNameInput.value = fileName;
-	}
+  // generateVolumetricData(curveWidth);
+  try {
+    // Send POST request to backend to generate volumetric data
+    const response = await fetch(
+      "http://localhost:3000/generate-volumetric-data",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          alphaValue,
+          curveWidth,
+          curveWidthMiddle,
+          curveWidthLowest,
+          dataSize,
+          loopsNumber,
+          neighboursNumber,
+          highestLoopValue,
+          middleLoopValue,
+          lowestLoopValue,
+          lowestIntensityValueInHighestLoop,
+          lowestIntensityValueInMiddleLoop,
+          lowestIntensityValueInLowestLoop,
+          loopStandardDeviation,
+          middleLoopStandardDeviation,
+          lowestLoopStandardDeviation,
+          intensityStandardDeviation,
+          middleIntensityStandardDeviation,
+          lowestIntensityStandardDeviation,
+          highestLoopPercentage,
+          middleLoopPercentage,
+          lowestLoopPercentage,
+          fileName,
+        }), // Adjust curveWidth as needed
+      }
+    );
+
+    if (response.ok) {
+      await downloadFile(
+        `${fileName}.txt`,
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${neighboursNumber}/${fileName}.txt`
+      );
+      await downloadFile(
+        `${fileName}.byte`,
+        `http://localhost:3000/download/${alphaValue}/${highestLoopPercentage}/${middleLoopPercentage}/${lowestLoopPercentage}/${loopsNumber}/${neighboursNumber}/${fileName}.byte`
+      );
+    } else {
+      console.error("Failed to generate volumetric data:", response.statusText);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  } finally {
+    // Re-enable the generate button
+    generateBtn.disabled = false;
+    generateBtn.innerHTML = "Generate"; // Restore the button text
+    generateBtn.style.cursor = "pointer";
+    // fileName = `vol${generateRandomString(6)}`;
+    fileName = changeVolName();
+    const VolNameInput = document.querySelector(".volNameInput");
+    VolNameInput.value = fileName;
+  }
 });
 
 // Function to initiate download
 // Function to initiate download
 async function downloadFile(filename, url) {
-	try {
-		// Fetch the file content
-		const response = await fetch(url);
-		if (!response.ok) {
-			throw new Error(`Failed to download file: ${response.statusText}`);
-		}
+  try {
+    // Fetch the file content
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to download file: ${response.statusText}`);
+    }
 
-		// Convert the response to Blob
-		const blob = await response.blob();
+    // Convert the response to Blob
+    const blob = await response.blob();
 
-		// Create a temporary link element
-		const link = document.createElement("a");
-		link.href = window.URL.createObjectURL(blob);
-		link.download = filename;
+    // Create a temporary link element
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
 
-		// Append the link to the document body
-		document.body.appendChild(link);
+    // Append the link to the document body
+    document.body.appendChild(link);
 
-		// Trigger the download
-		link.click();
+    // Trigger the download
+    link.click();
 
-		// Remove the link from the document body after a short delay
-		setTimeout(() => {
-			document.body.removeChild(link);
-			window.URL.revokeObjectURL(link.href);
-		}, 100);
+    // Remove the link from the document body after a short delay
+    setTimeout(() => {
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(link.href);
+    }, 100);
 
-		return Promise.resolve();
-	} catch (error) {
-		console.error("Error occurred during file download:", error);
-		return Promise.reject(error);
-	}
+    return Promise.resolve();
+  } catch (error) {
+    console.error("Error occurred during file download:", error);
+    return Promise.reject(error);
+  }
 }
 
 document.addEventListener("click", function (e) {
-	// Check if the clicked element is not the button with class "generateBtn"
-	if (!e.target.matches("button")) {
-		const elements = document.querySelectorAll("input");
+  // Check if the clicked element is not the button with class "generateBtn"
+  if (!e.target.matches("button")) {
+    const elements = document.querySelectorAll("input");
 
-		elements.forEach(function (element) {
-			element.style.outline = "none"; // Remove the outline if it's applied
-		});
-	}
+    elements.forEach(function (element) {
+      element.style.outline = "none"; // Remove the outline if it's applied
+    });
+  }
 });
